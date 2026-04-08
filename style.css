@@ -1,0 +1,158 @@
+/* Custom Variables */
+:root {
+    --bg-color: #0d0b14;
+    --card-bg: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --max-width-desktop: 1000px;
+    --max-width-tablet: 768px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    /* Mimicking the space background feel from the image */
+    background: radial-gradient(circle at center, #1e1b2e 0%, #0a0a0c 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Outer Container */
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: var(--max-width-desktop);
+    padding: 80px 40px; /* Desktop Spacing */
+    border-radius: 24px;
+}
+
+/* Header Spacing */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-primary);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.2;
+}
+
+.separator {
+    width: 150px;
+    opacity: 0.15;
+}
+
+/* Article List Layout */
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Spacing between articles */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.art-img {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.art-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.art-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.art-content h2 {
+    font-size: 20px;
+    color: var(--text-primary);
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.art-content h2:hover {
+    color: #4F46E5;
+}
+
+.art-content time {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* --- TABLET SPACING (1024px and below) --- */
+@media (max-width: 1024px) {
+    .card-container {
+        max-width: 90%;
+        padding: 60px 30px;
+    }
+    
+    .art-img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* --- MOBILE SPACING (412px and below) --- */
+@media (max-width: 600px) {
+    .card-container {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .article {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .art-img {
+        width: 100%;
+        height: 240px; /* Larger image on mobile as per design */
+    }
+
+    .art-content h2 {
+        font-size: 18px;
+    }
+
+    .article-list {
+        gap: 48px;
+    }
+}
