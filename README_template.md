@@ -1,18 +1,16 @@
-<!-- Please update value in the {}  -->
-
-<h1 align="center">{Your project name} | devChallenges</h1>
+<h1 align="center">Simple Article Listing | devChallenges</h1>
 
 <div align="center">
-   Solution for a challenge <a href="https://devchallenges.io/challenge/simple-article-listing" target="_blank">Simple Article Listing</a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
+    Solution for a challenge <a href="https://devchallenges.io/challenge/simple-article-listing" target="_blank">Simple Article Listing</a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
 </div>
 
 <div align="center">
   <h3>
-    <a href="{https://your-demo-link.your-domain}">
+    <a href="https://henrydevlab.github.io/simple-article-listing/">
       Demo
     </a>
     <span> | </span>
-    <a href="{https://your-url-to-the-solution}">
+    <a href="https://github.com/Henrydevlab/simple-article-listing">
       Solution
     </a>
     <span> | </span>
@@ -21,8 +19,6 @@
     </a>
   </h3>
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
 
@@ -34,53 +30,63 @@
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
-<!-- OVERVIEW -->
-
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./resources/preview-desktop.png)
 
-<!--
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
-
-- What have you learned/improved?
-- Your wisdom? :)
--->
+This project is a clean, modern article listing component designed to practice responsive layouts and interactive UI elements. It features a dark-themed background with high-contrast cards, ensuring readability and a premium aesthetic across all devices.
 
 ### What I learned
 
-<!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge. -->
+This challenge was a fantastic way to practice **Flexbox alignment** and **CSS transitions**. I specifically focused on:
+
+- Implementing a "Mobile-First" workflow to ensure the layout stacks correctly on smaller screens.
+- Using `flex-shrink: 0` on image containers to prevent thumbnails from distorting when titles are long.
+- Creating smooth micro-interactions using `transform` and `cubic-bezier` timing functions.
+
+**Code Highlight: Responsive Flex Toggle**
+```css
+.article {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+@media (max-width: 600px) {
+    .article {
+        flex-direction: column; /* Vertical stack for mobile */
+        align-items: flex-start;
+    }
+}
+```
 
 ### Useful resources
 
-<!--
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
--->
+- [CSS-Tricks: A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This remains the ultimate reference for understanding how flex containers behave.
+- [MDN Web Docs: Using CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) - Great for learning how to animate properties like `transform` and `color`.
 
 ### Built with
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS custom properties (Variables)
 - Flexbox
-- CSS Grid
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- Mobile-first workflow
+- CSS Keyframe Animations
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges-dashboard) challenge.
+
+- **Responsive Layout:** Optimized for 412px (Mobile), 1024px (Tablet), and 1350px (Desktop).
+- **Smooth Interactivity:** Hover effects including image scaling and text color shifts.
+- **Modern UI:** Radial gradient backgrounds and 3D-styled tech assets.
+- **Accessibility:** Semantic elements (`<article>`, `<time>`) used throughout for better SEO.
 
 ## Acknowledgements
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
+- Design inspired by the devChallenges.io team.
+- High-quality 3D renders provided by the challenge asset pack.
 
 ## Author
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
+- GitHub [@Henrydevlab](https://github.com/Henrydevlab)
