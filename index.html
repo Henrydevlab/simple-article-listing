@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
-
+    <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
     <title>Simple Article Listing | devChallenges.io</title>
-
     <link rel="stylesheet" href="style.css">
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        /* Essential structure to keep the author info at the bottom */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      body {
-        height: 100vh;
-      }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
 
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
+        .author-info {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 32px;
+            color: rgba(255, 255, 255, 0.6);
+        }
 
-      .author-info a {
-        text-decoration: none;
-      }
+        .author-info a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .author-info a:hover {
+            text-decoration: underline;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <main class="main-wrapper">
         <div class="card-container">
             <header class="header">
                 <h1>We release interesting articles about technology</h1>
-                <img src="Seperator.svg" alt="" class="separator" aria-hidden="true">
+                <img src="resources/Seperator.svg" alt="" class="separator" aria-hidden="true">
             </header>
 
             <div class="article-list">
@@ -81,11 +85,10 @@
         </div>
     </main>
 
-    <div class="author-info">
-      Coded by <a href="https://github.dev/Henrydevlab">Henry</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div>
-  </body>
+    <footer class="author-info">
+        Coded by <a href="https://github.com/Henrydevlab">Henry</a> | Challenge by
+        <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>
+    </footer>
+
+</body>
 </html>
